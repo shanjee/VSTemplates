@@ -1,0 +1,48 @@
+﻿<VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Dips Fhir R4 Core Template - version (1.0.0.0)</Name>
+    <Description>Standard Project template for Dips core projects</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Dips.Fhir.R4.[ResourceName]</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>dips_icon.jpg</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectCollection>
+	
+	<SolutionFolder Name="Common" CreateOnDisk="true">	
+		<ProjectTemplateLink ProjectName="$projectname$.Common" CopyParameters="true">
+		DIPS.FHIR.R4.Demo.Common\MyTemplate.vstemplate	
+		</ProjectTemplateLink>	  
+	</SolutionFolder>
+	  
+	<SolutionFolder Name="Server" CreateOnDisk="true">	
+		<ProjectTemplateLink ProjectName="$projectname$.Server.DB" CopyParameters="true">
+		DIPS.Fhir.R4.Demo.Server.DB\MyTemplate.vstemplate
+		</ProjectTemplateLink>
+		<ProjectTemplateLink ProjectName="$projectname$.Server" CopyParameters="true">
+		DIPS.FHIR.R4.Demo.Server\MyTemplate.vstemplate
+		</ProjectTemplateLink>
+	</SolutionFolder>
+	  
+	<SolutionFolder Name="Test" CreateOnDisk="true">	  
+		<ProjectTemplateLink ProjectName="$projectname$.AspNetTestHelper" CopyParameters="true">
+		TestDIPS.FHIR.R4.Demo.AspNetTestHelper\MyTemplate.vstemplate
+		</ProjectTemplateLink>
+		<ProjectTemplateLink ProjectName="$projectname$.IntegrationTest" CopyParameters="true">
+		TestDIPS.FHIR.R4.Demo.IntegrationTest\MyTemplate.vstemplate
+		</ProjectTemplateLink> 
+		<ProjectTemplateLink ProjectName="$projectname$.TestApp" CopyParameters="true">
+		TestDIPS.FHIR.IdMapping.TestApp\MyTemplate.vstemplate
+		</ProjectTemplateLink>	  
+	</SolutionFolder>
+	  
+    </ProjectCollection>
+  </TemplateContent>
+</VSTemplate>
